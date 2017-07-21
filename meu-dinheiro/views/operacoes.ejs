@@ -1,0 +1,7 @@
+<% include header %>
+      <h2>Operacoes</h2>
+      <% operacoes.forEach((operacao) => { %>
+        <p><%=operacao.descricao %> R$ <%=operacao.valor %></p>
+      <% }) %>
+      
+<% include footer %>
