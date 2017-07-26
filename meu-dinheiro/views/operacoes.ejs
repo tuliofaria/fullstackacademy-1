@@ -1,7 +1,18 @@
 <% include header %>
       <h2>Operacoes</h2>
+      <p>Filtrar por: 
+        <a href="/operacoes">Todos</a> |
+        <a href="/operacoes?tipo=entradas">Entradas</a> |
+        <a href="/operacoes?tipo=saidas">Saídas</a>
+      </p>
       <% operacoes.forEach((operacao) => { %>
-        <p><%=operacao.descricao %> R$ <%=operacao.valor %></p>
+        <p>
+          <%=operacao.descricao %> 
+          R$ <%=operacao.valor %>
+          - Sub-total: R$ <%= operacao.sub %> 
+          - <a href="/operacoes/delete/<%= operacao._id %>">Excluir</a>
+          - <a href="/operacoes/edit/<%= operacao._id %>">Editar</a>
+        </p> 
       <% }) %>
       
 <% include footer %>
