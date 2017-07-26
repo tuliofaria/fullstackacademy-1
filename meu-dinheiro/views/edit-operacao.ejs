@@ -1,0 +1,8 @@
+<% include header %>
+      <h2>Editar operação</h2>
+      <form method="POST">
+        Descrição: <input type="text" name="descricao" value="<%= operacao.descricao %>"><br>
+        Valor: <input type="text" name="valor" value="<%= operacao.valor %>"><br>
+        <button type="submit">Salvar</button>
+      </form>
+<% include footer %>
